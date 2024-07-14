@@ -1,0 +1,24 @@
+using System;
+namespace Develop05;
+
+public abstract class Goal
+{
+    private string _shortName = "";
+    private string _description = "";
+    private string _points  = "";
+
+    public Goal(string name, string description, string points)
+    {
+        _shortName = name;
+        _description = description;
+        _points = points;
+    }
+
+    public abstract void RecordEvent();
+    public abstract bool hComplete();
+    public virtual string DetailsString(){
+        return "";
+    }
+    public abstract string GetStringRepresentation();
+
+}
