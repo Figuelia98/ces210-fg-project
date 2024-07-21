@@ -10,15 +10,18 @@ public class SimpleGoal:Goal
 
     }
     public override void RecordEvent()
-    {
-       
+    {   _score = int.Parse(_points);
+        _hComplete = true;
     }
     public override bool hComplete()
     {
-        throw new NotImplementedException();
+       
+        return _hComplete;
     }
     public override string GetStringRepresentation()
     {
-        throw new NotImplementedException();
+        string representation = $"Simple Goal,{_shortName},{_description},{_points},{_hComplete},{_score}";
+        return representation;
+
     }
 }
