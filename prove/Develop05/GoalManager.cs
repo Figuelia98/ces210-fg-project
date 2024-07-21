@@ -163,8 +163,8 @@ foreach (string line in lines)
 
       }
       else if(parts[0]=="Checklist Goal") {
-        ChecklistGoal savedGoal = new ChecklistGoal(parts[1],parts[2],parts[3]);
-       _goal.Add(savedGoal);
+        //ChecklistGoal savedGoal = new ChecklistGoal(parts[1],parts[2],parts[3]);
+      // _goal.Add(savedGoal);
       }
 
     }
