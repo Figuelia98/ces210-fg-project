@@ -13,6 +13,12 @@ public class ChecklistGoal : Goal
       _target=target;
       _bonus=bonus;
     }
+    public void setAmount(int amount){
+      _amountCompleted = amount;
+    }
+    public void setComplete(){
+      _hComplete = true;
+    }
     public override void RecordEvent()
     {
       if (_amountCompleted < _target){

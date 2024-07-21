@@ -133,7 +133,7 @@ public class GoalManager
     int len = _goal.Count;
     for (int i = 0; i < len; i++){
    
-      outputFile.WriteLine($"{i+1}.{_goal[i].GetStringRepresentation()}");
+      outputFile.WriteLine($"{_goal[i].GetStringRepresentation()}");
     }
  }
 
@@ -159,12 +159,20 @@ foreach (string line in lines)
       }
       else if(parts[0]=="Eternal Goal"){
        EternalGoal savedGoal = new EternalGoal(parts[1],parts[2],parts[3]);
+       savedGoal.setScore(int.Parse(parts[4]));
        _goal.Add(savedGoal);
 
       }
       else if(parts[0]=="Checklist Goal") {
-        //ChecklistGoal savedGoal = new ChecklistGoal(parts[1],parts[2],parts[3]);
-      // _goal.Add(savedGoal);
+        ChecklistGoal savedGoal = new ChecklistGoal(parts[1],parts[2],parts[3],int.Parse(parts[6]), int.Parse(parts[7]));
+        savedGoal.setAmount(int.Parse(parts[5]));
+        savedGoal.setScore(int.Parse(parts[8]));
+        if(parts[6]==parts[5])
+        {
+          savedGoal.setComplete();
+        }
+
+          _goal.Add(savedGoal);
       }
 
     }

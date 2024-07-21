@@ -1,3 +1,4 @@
-100
-1.Simple Goal,Bachelor Degree,Get bachelor degree from Byu Idaho,100,True,100
-2.Eternal Goal,Attend the church,Attend the church every Sunday,200,0
+0
+Simple Goal,Bachelor Degree,Getting bachelor degree in BYU Idaho,100,False,0
+Eternal Goal,Praying every day,Attend daily gathering,100,0
+Checklist Goal,Attend the church 3 times,Attend the church every till 3 ,40,False,0,3,100,0

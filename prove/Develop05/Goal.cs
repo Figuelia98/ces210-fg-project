@@ -20,6 +20,10 @@ public abstract class Goal
     public int getScore(){
         return _score;
     } 
+    public void setScore(int score){
+        _score = score;
+    }
+   
     public string getPoint(){
         return _points;
     }
