@@ -11,12 +11,12 @@ public class Outdoor : Event
         _weather = weather;
 
     }
-    public string FullDetail()
+    public override string FullDetails()
     {
 
-        return $"Outdoor ,{_title}, {_description}, {_date}, {_time}, {_address}, {_weather}";
+        return $"Outdoor ,{_title}, {_description}, {_date}, {_time}, {_address.GetAddressLine()}, {_weather}";
     }
-    public string ShortDetails()
+    public override string ShortDetails()
     {
         return $"Outdoor, {_description}, {_date}";
     }

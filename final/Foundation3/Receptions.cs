@@ -9,12 +9,12 @@ public class Receptions : Event
     {
         _email = email;
     }
-    public string FullDetail()
+    public override string FullDetails()
     {
 
-        return $"Receptions ,{_title}, {_description}, {_date}, {_time}, {_address}, {_email}";
+        return $"Receptions ,{_title}, {_description}, {_date}, {_time}, {_address.GetAddressLine()}, {_email}";
     }
-    public string ShortDetails()
+    public override string ShortDetails()
     {
         return $"Receptions, {_description}, {_date}";
     }

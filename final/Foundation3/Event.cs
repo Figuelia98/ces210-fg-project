@@ -23,7 +23,13 @@ public class Event
     }
 
     public string StdDetails(){
-       return $"{_title}, {_description}, {_date}, {_time}, {_address}";
+       return $"{_title}, {_description}, {_date}, {_time}, {_address.GetAddressLine()}";
+    }
+    public virtual string FullDetails(){
+        return"";
+    }
+    public virtual string ShortDetails(){
+        return "";
     }
 
    

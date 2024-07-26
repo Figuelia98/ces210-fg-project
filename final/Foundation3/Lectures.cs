@@ -12,11 +12,11 @@ public class Lectures: Event
       _capacity =capacity;
 
     }
-    public string FullDetail(){
+    public override string FullDetails(){
 
-        return $"Lectures ,{_title}, {_description}, {_date}, {_time}, {_address}, {_speaker}, {_capacity}";
+        return $"Lectures ,{_title}, {_description}, {_date}, {_time}, {_address.GetAddressLine()}, {_speaker}, {_capacity}";
     }
-    public string ShortDetails()
+    public override string ShortDetails()
     {
         return $"Lectures, {_description}, {_date}";
     }
